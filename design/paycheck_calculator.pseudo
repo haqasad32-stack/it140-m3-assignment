@@ -10,18 +10,23 @@
 
 START paycheck_calculator
 
-    TODO: Obtain the required program input.
+    GET hours 
 
-    IF TODO: Specify the condition for the applicable pay rule.
-        TODO: List the processing steps for the true decision path.
+    IF hours > 40
+        LET regular_pay = 40 * 20
+        LET overtime_hours = hours - 40
+        LET overtime_pay = overtime_hours * 30
+        LET weekly_pay = regular_pay + overtime_pay
     ELSE
-        TODO: List the processing steps for the false decision path.
+        LET weekly_pay = hours * 20
     ENDIF
 
-    TODO: Output the calculated weekly paycheck.
+    PUT weekly_pay
 
 END paycheck_calculator
 
 
 # === References ===
-# TODO: List outside sources or assistance you actually used, or delete this line.
+# zyBooks
+AI Acknowledgement 
+Used to organize My code
